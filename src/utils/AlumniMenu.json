@@ -1,0 +1,29 @@
+  [
+    {
+      "title": "Overview",
+      "children": []
+    },
+    
+    {
+      "title": "Events",
+      "children": [
+        { "name": "Upcoming Events", "link": "/dashboard/alumni/event/upcoming" },
+        { "name": "Past Events", "link": "/dashboard/alumni/event/past-event" }
+      ]
+    },{
+      "title": "Alumni's connection",
+      "children": [
+        { "name": "All Alumni", "link": "/dashboard/alumni/all-alumni" }
+      ]
+    },{
+      "title": "Certificates",
+      "children": [
+        { "name": "All Certificates", "link": "/dashboard/alumni/certificates" }
+      ]
+    },{
+      "title": "Shared Job Opportunities",
+      "children": [
+        { "name": "All Shared Opportunities", "link": "/dashboard/alumni/job-opportunity" }
+      ]
+    }
+  ]

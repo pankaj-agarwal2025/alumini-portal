@@ -1,0 +1,24 @@
+  [
+    {
+      "title": "Overview",
+      "children": []
+    },
+    
+    {
+      "title": "Events",
+      "children": [
+        { "name": "Upcoming Events", "link": "/dashboard/faculty/event/upcoming" },
+        { "name": "Past Events", "link": "/dashboard/faculty/event/past-event" }
+      ]
+    },{
+      "title": "Certificates",
+      "children": [
+        { "name": "All Certificates", "link": "/dashboard/faculty/certificates" }
+      ]
+    },{
+      "title": "Post",
+      "children": [
+        { "name": "All Post", "link": "/dashboard/faculty/post" }
+      ]
+    }
+  ]
