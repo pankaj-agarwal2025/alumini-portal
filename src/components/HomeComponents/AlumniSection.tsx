@@ -8,10 +8,10 @@ const AlumniSection = () => {
 
   // Sample alumni images - replace with your actual images
   const alumniImages = [
-    '/alumni/alumni1.jpg',
-    '/alumni/alumni2.jpg',
-    '/alumni/alumni3.jpg',
-    '/alumni/alumni1.jpg'
+    '/alumni/img29.JPG',
+    '/alumni/img27.JPG',
+    '/alumni/img5.JPG',
+    '/alumni/img4.JPG'
   ];
 
   // Typewriter text

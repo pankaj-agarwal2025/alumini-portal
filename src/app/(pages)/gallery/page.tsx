@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'; // Import Next.js Image component
+import Link from 'next/link';
 
 // Define TypeScript interfaces
 interface AlumniType {
@@ -9,6 +10,15 @@ interface AlumniType {
   year: number;
   field: string;
   image: string;
+}
+
+interface MemoryType {
+  id: number;
+  title: string;
+  location: string;
+  year: number;
+  image: string;
+  isLarge?: boolean;
 }
 
 interface MasonryColumnProps {
@@ -22,15 +32,29 @@ export default function AlumniGallery() {
 
   // Sample alumni data with placeholder images
   const alumni: AlumniType[] = [
-    { id: 1, name: 'Sarah Johnson', year: 2021, field: 'Computer Science', image: '/gallery/gallery.jpg' },
-    { id: 2, name: 'Michael Chen', year: 2022, field: 'Business', image: '/gallery/gallery.jpg' },
-    { id: 3, name: 'Priya Patel', year: 2023, field: 'Engineering', image: '/gallery/gallery.jpg' },
-    { id: 4, name: 'James Wilson', year: 2021, field: 'Medicine', image: '/gallery/gallery.jpg' },
-    { id: 5, name: 'Emma Rodriguez', year: 2024, field: 'Arts', image: '/gallery/gallery.jpg' },
-    { id: 6, name: 'David Kim', year: 2022, field: 'Engineering', image: '/gallery/gallery.jpg' },
-    { id: 7, name: 'Olivia Taylor', year: 2023, field: 'Computer Science', image: '/gallery/gallery.jpg' },
-    { id: 8, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/gallery.jpg' },
-    { id: 9, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/gallery.jpg' }
+    { id: 1, name: 'Sarah Johnson', year: 2021, field: 'Computer Science', image: '/gallery/img1.jpg' },
+    { id: 2, name: 'Michael Chen', year: 2022, field: 'Business', image: '/gallery/img2.jpg' },
+    { id: 3, name: 'Priya Patel', year: 2023, field: 'Engineering', image: '/gallery/img9.jpg' },
+    { id: 4, name: 'James Wilson', year: 2021, field: 'Medicine', image: '/gallery/img10.jpg' },
+    { id: 5, name: 'Emma Rodriguez', year: 2024, field: 'Arts', image: '/gallery/img11.jpg' },
+    { id: 6, name: 'David Kim', year: 2022, field: 'Engineering', image: '/gallery/img12.jpg' },
+    { id: 7, name: 'Olivia Taylor', year: 2023, field: 'Computer Science', image: '/gallery/img13.jpg' },
+    { id: 8, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/img14.jpg' },
+    { id: 9, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/img15.jpg' }
+  ];
+
+  // Sample memories data with structured information
+  const memories: MemoryType[] = [
+    { id: 1, title: 'Alumni Reunion 2023', location: 'Campus Center', year: 2023, image: '/memories/img1.jpg', isLarge: true },
+    { id: 2, title: 'Alumni Gathering 2022', location: 'Campus Center', year: 2022, image: '/memories/img2.jpg' },
+    { id: 3, title: 'Alumni Gathering 2021', location: 'Campus Center', year: 2021, image: '/memories/img3.jpg' },
+    { id: 4, title: 'Alumni Gathering 2020', location: 'Campus Center', year: 2020, image: '/memories/img4.jpg' },
+    { id: 5, title: 'Alumni Reunion 2019', location: 'Campus Center', year: 2019, image: '/memories/img5.jpg', isLarge: true },
+    { id: 6, title: 'Alumni Gathering 2018', location: 'Campus Center', year: 2018, image: '/memories/img6.jpg' },
+    { id: 7, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img7.jpg' },
+    { id: 8, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img8.jpg' },
+    { id: 9, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img9.jpg' },
+    { id: 10, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img10.jpg' },
   ];
 
   // Filter alumni based on activeFilter
@@ -242,7 +266,7 @@ export default function AlumniGallery() {
         </div>
       </section>
 
-      {/* Animated Grid Gallery */}
+      {/* Animated Grid Gallery - Refactored with Object Data */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">Memories & Moments</h2>
@@ -251,7 +275,7 @@ export default function AlumniGallery() {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-min">
-            {[...Array(8)].map((_, i) => {
+            {memories.map((memory, i) => {
               const isLarge = i % 5 === 0;
               const gridClass = isLarge
                 ? "col-span-2 row-span-2"
@@ -259,21 +283,21 @@ export default function AlumniGallery() {
 
               return (
                 <div
-                  key={i}
+                  key={memory.id}
                   className={`${gridClass} overflow-hidden rounded-lg transform transition-all duration-500 hover:scale-105 hover:z-10`}
                 >
                   <div className="w-full h-full relative group">
                     <Image
-                      src={`/gallery/gallery.jpg`}
-                      alt="Alumni event"
+                      src={memory.image}
+                      alt={memory.title}
                       width={isLarge ? 600 : 300}
                       height={isLarge ? 400 : 200}
                       className="w-full h-full object-cover transition-all duration-500 group-hover:saturate-150"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 className="text-lg font-medium">Alumni {isLarge ? 'Reunion' : 'Gathering'} {2022 - i}</h3>
-                        <p className="text-sm text-gray-300">Campus Center</p>
+                        <h3 className="text-lg font-medium">{memory.title}</h3>
+                        <p className="text-sm text-gray-300">{memory.location}</p>
                       </div>
                     </div>
                   </div>
@@ -291,9 +315,10 @@ export default function AlumniGallery() {
           <p className="max-w-2xl mx-auto mb-8 text-lg">
             Stay connected with your alma mater and fellow graduates. Update your information and be part of our growing community.
           </p>
+          <Link href={"/login"}>
           <button className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:bg-gray-100 transition-colors">
             Update Your Profile
-          </button>
+          </button></Link>
         </div>
       </section>
     </div>
