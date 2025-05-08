@@ -5,10 +5,10 @@ import Image from 'next/image';
 const GallerySlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    '/gallery/img3.jpg',
-    '/gallery/img6.jpg',
-    '/gallery/img7.jpg',
-    '/gallery/img8.jpg'
+    '/gallery/img3.JPG',
+    '/gallery/img6.JPG',
+    '/gallery/img7.JPG',
+    '/gallery/img8.JPG'
   ];
 
   const goToNext = useCallback(() => {
