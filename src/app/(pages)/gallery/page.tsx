@@ -32,29 +32,29 @@ export default function AlumniGallery() {
 
   // Sample alumni data with placeholder images
   const alumni: AlumniType[] = [
-    { id: 1, name: 'Sarah Johnson', year: 2021, field: 'Computer Science', image: '/gallery/img1.jpg' },
-    { id: 2, name: 'Michael Chen', year: 2022, field: 'Business', image: '/gallery/img2.jpg' },
-    { id: 3, name: 'Priya Patel', year: 2023, field: 'Engineering', image: '/gallery/img9.jpg' },
-    { id: 4, name: 'James Wilson', year: 2021, field: 'Medicine', image: '/gallery/img10.jpg' },
-    { id: 5, name: 'Emma Rodriguez', year: 2024, field: 'Arts', image: '/gallery/img11.jpg' },
-    { id: 6, name: 'David Kim', year: 2022, field: 'Engineering', image: '/gallery/img12.jpg' },
-    { id: 7, name: 'Olivia Taylor', year: 2023, field: 'Computer Science', image: '/gallery/img13.jpg' },
-    { id: 8, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/img14.jpg' },
-    { id: 9, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/img15.jpg' }
+    { id: 1, name: 'Sarah Johnson', year: 2021, field: 'Computer Science', image: '/gallery/img1.JPG' },
+    { id: 2, name: 'Michael Chen', year: 2022, field: 'Business', image: '/gallery/img2.JPG' },
+    { id: 3, name: 'Priya Patel', year: 2023, field: 'Engineering', image: '/gallery/img9.JPG' },
+    { id: 4, name: 'James Wilson', year: 2021, field: 'Medicine', image: '/gallery/img10.JPG' },
+    { id: 5, name: 'Emma Rodriguez', year: 2024, field: 'Arts', image: '/gallery/img11.JPG' },
+    { id: 6, name: 'David Kim', year: 2022, field: 'Engineering', image: '/gallery/img12.JPG' },
+    { id: 7, name: 'Olivia Taylor', year: 2023, field: 'Computer Science', image: '/gallery/img13.JPG' },
+    { id: 8, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/img14.JPG' },
+    { id: 9, name: 'Robert Garcia', year: 2024, field: 'Business', image: '/gallery/img15.JPG' }
   ];
 
   // Sample memories data with structured information
   const memories: MemoryType[] = [
-    { id: 1, title: 'Alumni Reunion 2023', location: 'Campus Center', year: 2023, image: '/memories/img1.jpg', isLarge: true },
-    { id: 2, title: 'Alumni Gathering 2022', location: 'Campus Center', year: 2022, image: '/memories/img2.jpg' },
-    { id: 3, title: 'Alumni Gathering 2021', location: 'Campus Center', year: 2021, image: '/memories/img3.jpg' },
-    { id: 4, title: 'Alumni Gathering 2020', location: 'Campus Center', year: 2020, image: '/memories/img4.jpg' },
-    { id: 5, title: 'Alumni Reunion 2019', location: 'Campus Center', year: 2019, image: '/memories/img5.jpg', isLarge: true },
-    { id: 6, title: 'Alumni Gathering 2018', location: 'Campus Center', year: 2018, image: '/memories/img6.jpg' },
-    { id: 7, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img7.jpg' },
-    { id: 8, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img8.jpg' },
-    { id: 9, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img9.jpg' },
-    { id: 10, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img10.jpg' },
+    { id: 1, title: 'Alumni Reunion 2023', location: 'Campus Center', year: 2023, image: '/memories/img1.JPG', isLarge: true },
+    { id: 2, title: 'Alumni Gathering 2022', location: 'Campus Center', year: 2022, image: '/memories/img2.JPG' },
+    { id: 3, title: 'Alumni Gathering 2021', location: 'Campus Center', year: 2021, image: '/memories/img3.JPG' },
+    { id: 4, title: 'Alumni Gathering 2020', location: 'Campus Center', year: 2020, image: '/memories/img4.JPG' },
+    { id: 5, title: 'Alumni Reunion 2019', location: 'Campus Center', year: 2019, image: '/memories/img5.JPG', isLarge: true },
+    { id: 6, title: 'Alumni Gathering 2018', location: 'Campus Center', year: 2018, image: '/memories/img6.JPG' },
+    { id: 7, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img7.JPG' },
+    { id: 8, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img8.JPG' },
+    { id: 9, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img9.JPG' },
+    { id: 10, title: 'Alumni Gathering 2017', location: 'Campus Center', year: 2017, image: '/memories/img10.JPG' },
   ];
 
   // Filter alumni based on activeFilter
@@ -201,7 +201,7 @@ export default function AlumniGallery() {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
                     <Image
-                      src={`/gallery/gallery.jpg`}
+                      src={`/gallery/gallery.JPG`}
                       alt="Alumni testimonial"
                       width={48}
                       height={48}
