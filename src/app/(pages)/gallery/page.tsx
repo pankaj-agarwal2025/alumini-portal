@@ -201,7 +201,7 @@ export default function AlumniGallery() {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
                     <Image
-                      src={`/gallery/gallery.jpg`}
+                      src={`/logo.jpg`}
                       alt="Alumni testimonial"
                       width={48}
                       height={48}
